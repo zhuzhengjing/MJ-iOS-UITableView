@@ -21,6 +21,23 @@
 		3242CF311A95F46C004F2A27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3242CF131A95F46C004F2A27 /* UIKit.framework */; };
 		3242CF391A95F46C004F2A27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF371A95F46C004F2A27 /* InfoPlist.strings */; };
 		3242CF3B1A95F46C004F2A27 /* UITableView_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3242CF3A1A95F46C004F2A27 /* UITableView_____Tests.m */; };
+		3242CF551A95F47D004F2A27 /* baby.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF451A95F47D004F2A27 /* baby.jpg */; };
+		3242CF561A95F47D004F2A27 /* bag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF461A95F47D004F2A27 /* bag.jpg */; };
+		3242CF571A95F47D004F2A27 /* book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF471A95F47D004F2A27 /* book.jpg */; };
+		3242CF581A95F47D004F2A27 /* buty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF481A95F47D004F2A27 /* buty.jpg */; };
+		3242CF591A95F47D004F2A27 /* clean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF491A95F47D004F2A27 /* clean.jpg */; };
+		3242CF5A1A95F47D004F2A27 /* clothe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF4A1A95F47D004F2A27 /* clothe.jpg */; };
+		3242CF5B1A95F47D004F2A27 /* decoration.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF4B1A95F47D004F2A27 /* decoration.jpg */; };
+		3242CF5C1A95F47D004F2A27 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF4C1A95F47D004F2A27 /* food.jpg */; };
+		3242CF5D1A95F47D004F2A27 /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF4D1A95F47D004F2A27 /* home.jpg */; };
+		3242CF5E1A95F47D004F2A27 /* knife.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF4E1A95F47D004F2A27 /* knife.jpg */; };
+		3242CF5F1A95F47D004F2A27 /* life.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF4F1A95F47D004F2A27 /* life.jpg */; };
+		3242CF601A95F47D004F2A27 /* mechine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF501A95F47D004F2A27 /* mechine.jpg */; };
+		3242CF611A95F47D004F2A27 /* pet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF511A95F47D004F2A27 /* pet.jpg */; };
+		3242CF621A95F47D004F2A27 /* phone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF521A95F47D004F2A27 /* phone.jpg */; };
+		3242CF631A95F47D004F2A27 /* shops.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF531A95F47D004F2A27 /* shops.plist */; };
+		3242CF641A95F47D004F2A27 /* toy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3242CF541A95F47D004F2A27 /* toy.jpg */; };
+		3242CF671A960C56004F2A27 /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3242CF661A960C56004F2A27 /* Shop.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +70,24 @@
 		3242CF361A95F46C004F2A27 /* UITableView-性能优化Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UITableView-性能优化Tests-Info.plist"; sourceTree = "<group>"; };
 		3242CF381A95F46C004F2A27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3242CF3A1A95F46C004F2A27 /* UITableView_____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView_____Tests.m"; sourceTree = "<group>"; };
+		3242CF451A95F47D004F2A27 /* baby.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baby.jpg; sourceTree = "<group>"; };
+		3242CF461A95F47D004F2A27 /* bag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bag.jpg; sourceTree = "<group>"; };
+		3242CF471A95F47D004F2A27 /* book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book.jpg; sourceTree = "<group>"; };
+		3242CF481A95F47D004F2A27 /* buty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = buty.jpg; sourceTree = "<group>"; };
+		3242CF491A95F47D004F2A27 /* clean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clean.jpg; sourceTree = "<group>"; };
+		3242CF4A1A95F47D004F2A27 /* clothe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clothe.jpg; sourceTree = "<group>"; };
+		3242CF4B1A95F47D004F2A27 /* decoration.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = decoration.jpg; sourceTree = "<group>"; };
+		3242CF4C1A95F47D004F2A27 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
+		3242CF4D1A95F47D004F2A27 /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		3242CF4E1A95F47D004F2A27 /* knife.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = knife.jpg; sourceTree = "<group>"; };
+		3242CF4F1A95F47D004F2A27 /* life.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = life.jpg; sourceTree = "<group>"; };
+		3242CF501A95F47D004F2A27 /* mechine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mechine.jpg; sourceTree = "<group>"; };
+		3242CF511A95F47D004F2A27 /* pet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pet.jpg; sourceTree = "<group>"; };
+		3242CF521A95F47D004F2A27 /* phone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = phone.jpg; sourceTree = "<group>"; };
+		3242CF531A95F47D004F2A27 /* shops.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shops.plist; sourceTree = "<group>"; };
+		3242CF541A95F47D004F2A27 /* toy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = toy.jpg; sourceTree = "<group>"; };
+		3242CF651A960C56004F2A27 /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
+		3242CF661A960C56004F2A27 /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +152,8 @@
 				3242CF211A95F46C004F2A27 /* Main.storyboard */,
 				3242CF241A95F46C004F2A27 /* MJViewController.h */,
 				3242CF251A95F46C004F2A27 /* MJViewController.m */,
+				3242CF651A960C56004F2A27 /* Shop.h */,
+				3242CF661A960C56004F2A27 /* Shop.m */,
 				3242CF271A95F46C004F2A27 /* Images.xcassets */,
 				3242CF161A95F46C004F2A27 /* Supporting Files */,
 			);
@@ -126,6 +163,7 @@
 		3242CF161A95F46C004F2A27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3242CF441A95F47D004F2A27 /* 淘宝 */,
 				3242CF171A95F46C004F2A27 /* UITableView-性能优化-Info.plist */,
 				3242CF181A95F46C004F2A27 /* InfoPlist.strings */,
 				3242CF1B1A95F46C004F2A27 /* main.m */,
@@ -150,6 +188,29 @@
 				3242CF371A95F46C004F2A27 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3242CF441A95F47D004F2A27 /* 淘宝 */ = {
+			isa = PBXGroup;
+			children = (
+				3242CF451A95F47D004F2A27 /* baby.jpg */,
+				3242CF461A95F47D004F2A27 /* bag.jpg */,
+				3242CF471A95F47D004F2A27 /* book.jpg */,
+				3242CF481A95F47D004F2A27 /* buty.jpg */,
+				3242CF491A95F47D004F2A27 /* clean.jpg */,
+				3242CF4A1A95F47D004F2A27 /* clothe.jpg */,
+				3242CF4B1A95F47D004F2A27 /* decoration.jpg */,
+				3242CF4C1A95F47D004F2A27 /* food.jpg */,
+				3242CF4D1A95F47D004F2A27 /* home.jpg */,
+				3242CF4E1A95F47D004F2A27 /* knife.jpg */,
+				3242CF4F1A95F47D004F2A27 /* life.jpg */,
+				3242CF501A95F47D004F2A27 /* mechine.jpg */,
+				3242CF511A95F47D004F2A27 /* pet.jpg */,
+				3242CF521A95F47D004F2A27 /* phone.jpg */,
+				3242CF531A95F47D004F2A27 /* shops.plist */,
+				3242CF541A95F47D004F2A27 /* toy.jpg */,
+			);
+			path = "淘宝";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +291,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3242CF281A95F46C004F2A27 /* Images.xcassets in Resources */,
+				3242CF551A95F47D004F2A27 /* baby.jpg in Resources */,
+				3242CF631A95F47D004F2A27 /* shops.plist in Resources */,
+				3242CF641A95F47D004F2A27 /* toy.jpg in Resources */,
+				3242CF5C1A95F47D004F2A27 /* food.jpg in Resources */,
+				3242CF561A95F47D004F2A27 /* bag.jpg in Resources */,
+				3242CF5D1A95F47D004F2A27 /* home.jpg in Resources */,
+				3242CF591A95F47D004F2A27 /* clean.jpg in Resources */,
+				3242CF5E1A95F47D004F2A27 /* knife.jpg in Resources */,
 				3242CF1A1A95F46C004F2A27 /* InfoPlist.strings in Resources */,
+				3242CF601A95F47D004F2A27 /* mechine.jpg in Resources */,
+				3242CF621A95F47D004F2A27 /* phone.jpg in Resources */,
+				3242CF571A95F47D004F2A27 /* book.jpg in Resources */,
+				3242CF5F1A95F47D004F2A27 /* life.jpg in Resources */,
+				3242CF5A1A95F47D004F2A27 /* clothe.jpg in Resources */,
 				3242CF231A95F46C004F2A27 /* Main.storyboard in Resources */,
+				3242CF581A95F47D004F2A27 /* buty.jpg in Resources */,
+				3242CF5B1A95F47D004F2A27 /* decoration.jpg in Resources */,
+				3242CF611A95F47D004F2A27 /* pet.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +330,7 @@
 				3242CF1C1A95F46C004F2A27 /* main.m in Sources */,
 				3242CF261A95F46C004F2A27 /* MJViewController.m in Sources */,
 				3242CF201A95F46C004F2A27 /* MJAppDelegate.m in Sources */,
+				3242CF671A960C56004F2A27 /* Shop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
