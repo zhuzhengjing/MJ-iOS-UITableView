@@ -16,7 +16,11 @@
                                 <rect key="frame" x="0.0" y="32" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="trash" id="zSx-Be-uGl"/>
+                                    <barButtonItem enabled="NO" systemItem="trash" id="zSx-Be-uGl">
+                                        <connections>
+                                            <action selector="deleteItem:" destination="vXZ-lx-hvc" id="H0E-Kh-nCZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="淘宝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j63-rd-jtl">
@@ -33,6 +37,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="removeItem" destination="zSx-Be-uGl" id="YSM-Yc-SkV"/>
                         <outlet property="titleLable" destination="j63-rd-jtl" id="95X-Xy-zy4"/>
                     </connections>
                 </viewController>

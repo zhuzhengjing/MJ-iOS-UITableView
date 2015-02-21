@@ -14,6 +14,9 @@
 @property (nonatomic, copy) NSMutableArray *shops;
 @property (nonatomic, copy) NSMutableArray *delected;
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
+- (IBAction)deleteItem:(UIBarButtonItem *)sender;
+@property (nonatomic, strong) UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *removeItem;
 
 @end
 
@@ -27,11 +30,11 @@
     
     CGFloat y = toolBar.frame.origin.y + toolBar.frame.size.height;
     CGRect rect = CGRectMake(0, y, self.view.frame.size.width, self.view.frame.size.height - y);
-    UITableView *tableView = [[UITableView alloc] initWithFrame:rect
-                                                          style:UITableViewStylePlain];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    [self.view addSubview:tableView];
+    _tableView = [[UITableView alloc] initWithFrame:rect
+                                              style:UITableViewStylePlain];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
 
     _shops = [NSMutableArray array];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"shops.plist" ofType:nil];
@@ -102,8 +105,11 @@
     
     if (_delected.count == 0) {
         _titleLable.text = @"淘宝";
+        _removeItem.enabled = NO;
+        
     } else {
         _titleLable.text = [NSString stringWithFormat:@"淘宝（%d）", _delected.count];
+        _removeItem.enabled = YES;
     }
 //    _titleLable.text = [NSString stringWithFormat:@"淘宝（%d）", _delected.count];
     // 刷新这一行
@@ -111,6 +117,24 @@
 }
 
 
+- (IBAction)deleteItem:(UIBarButtonItem *)sender
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (Shop *s in _delected) {
+        int index = [_shops indexOfObject:s];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
+        [array addObject:path];
+    }
+    [_shops removeObjectsInArray:_delected];
+    
+    [_delected removeAllObjects];
+    
+    //[_tableView reloadData];
+    [_tableView deleteRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    _removeItem.enabled = NO;
+    _titleLable.text = @"淘宝";
+}
 @end
 
 
