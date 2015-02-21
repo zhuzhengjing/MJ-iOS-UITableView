@@ -41,13 +41,7 @@
     NSArray *array = [NSArray arrayWithContentsOfFile:path];
     
     for (NSDictionary *dict in array) {
-//        Shop *shop = [[Shop alloc] init];
-//        shop.name = dict[@"name"];
-//        shop.icon = dict[@"icon"];
-//        shop.desc = dict[@"desc"];
-        
         Shop *s = [Shop shopWithDict:dict];
-        
         [_shops addObject:s];
     }
     
