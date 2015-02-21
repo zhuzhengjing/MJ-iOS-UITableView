@@ -13,6 +13,8 @@
 @interface MJViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, copy) NSMutableArray *shops;
 @property (nonatomic, copy) NSMutableArray *delected;
+@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+
 @end
 
 @implementation MJViewController
@@ -98,6 +100,12 @@
         [_delected removeObject:s];             //如果有，代表已经选中，但是又点击了一次，删除
     }
     
+    if (_delected.count == 0) {
+        _titleLable.text = @"淘宝";
+    } else {
+        _titleLable.text = [NSString stringWithFormat:@"淘宝（%d）", _delected.count];
+    }
+//    _titleLable.text = [NSString stringWithFormat:@"淘宝（%d）", _delected.count];
     // 刷新这一行
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
