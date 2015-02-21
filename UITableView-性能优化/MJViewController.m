@@ -51,6 +51,16 @@
 // 返回每一section有多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    // 更新标题栏和垃圾桶的状态
+    if (_delected.count == 0) {
+        _titleLable.text = @"淘宝";
+        _removeItem.enabled = NO;
+        
+    } else {
+        _titleLable.text = [NSString stringWithFormat:@"淘宝（%d）", _delected.count];
+        _removeItem.enabled = YES;
+    }
+    
     return _shops.count;
 }
 
@@ -96,16 +106,7 @@
     } else {
         [_delected removeObject:s];             //如果有，代表已经选中，但是又点击了一次，删除
     }
-    
-    if (_delected.count == 0) {
-        _titleLable.text = @"淘宝";
-        _removeItem.enabled = NO;
-        
-    } else {
-        _titleLable.text = [NSString stringWithFormat:@"淘宝（%d）", _delected.count];
-        _removeItem.enabled = YES;
-    }
-//    _titleLable.text = [NSString stringWithFormat:@"淘宝（%d）", _delected.count];
+
     // 刷新这一行
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -125,9 +126,6 @@
     
     //[_tableView reloadData];
     [_tableView deleteRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationAutomatic];
-    
-    _removeItem.enabled = NO;
-    _titleLable.text = @"淘宝";
 }
 @end
 
