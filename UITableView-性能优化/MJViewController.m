@@ -11,7 +11,8 @@
 
 
 @interface MJViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic) NSMutableArray *shops;
+@property (nonatomic, copy) NSMutableArray *shops;
+@property (nonatomic, copy) NSMutableArray *delected;
 @end
 
 @implementation MJViewController
@@ -35,41 +36,75 @@
     NSArray *array = [NSArray arrayWithContentsOfFile:path];
     
     for (NSDictionary *dict in array) {
-        Shop *shop = [[Shop alloc] init];
-        shop.name = dict[@"name"];
-        shop.icon = dict[@"icon"];
-        shop.desc = dict[@"desc"];
+//        Shop *shop = [[Shop alloc] init];
+//        shop.name = dict[@"name"];
+//        shop.icon = dict[@"icon"];
+//        shop.desc = dict[@"desc"];
         
-        [_shops addObject:shop];
+        Shop *s = [Shop shopWithDict:dict];
+        
+        [_shops addObject:s];
     }
-
+    
+    _delected = [NSMutableArray array];
 }
 
+// 返回每一section有多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _shops.count;
 }
 
-
+// 返回一行cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ID = @"cell";
+    Shop *s = _shops[indexPath.row];
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
 
-    cell.textLabel.text = [_shops[indexPath.row] name];
-    cell.detailTextLabel.text = [_shops[indexPath.row] desc];
-    cell.imageView.image = [UIImage imageNamed:[_shops[indexPath.row] icon]];
+    cell.textLabel.text = [s name];
+    cell.detailTextLabel.text = [s desc];
+    cell.imageView.image = [UIImage imageNamed:[s icon]];
+    
+    if ([_delected containsObject:s]) {
+        // 如果有选中的行，打钩
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
 
     return cell;
 }
 
+// 设置每行高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 70;
 }
 
+
+// 选中状态
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Shop *s = _shops[indexPath.row];
+    
+    if ([_delected containsObject:s] == NO) {   //如果_delected数组中么有，即代表是新选中的
+        [_delected addObject:s];
+    } else {
+        [_delected removeObject:s];             //如果有，代表已经选中，但是又点击了一次，删除
+    }
+    
+    // 刷新这一行
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+
 @end
+
+
+
+

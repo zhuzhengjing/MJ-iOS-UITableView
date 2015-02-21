@@ -15,5 +15,6 @@
 @property (nonatomic, copy) NSString *desc;
 
 + (instancetype) shopWithName:(NSString*)name icon:(NSString*)icon desc:(NSString*)desc;
++ (instancetype) shopWithDict:(NSDictionary *)dict;
 
 @end
